@@ -11,14 +11,14 @@ class ListStuff extends React.Component {
 
   /** If the subscription(s) have been received, render the page, otherwise show a loading icon. */
   render() {
-    return (this.props.ready) ? this.renderPage() : <Loader active>Getting data</Loader>;
+    return (this.props.ready) ? this.renderPage() : <Loader>Getting data</Loader>;
   }
 
   /** Render the page once subscriptions have been received. */
   renderPage() {
     return (
         <Container>
-          <Header as="h2" textAlign="center">List Stuff</Header>
+          <Header as="h2" textAlign="center" inverted>List Stuff</Header>
           <Table celled>
             <Table.Header>
               <Table.Row>
